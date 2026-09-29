@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Detection Test | ElderSafe AI{% endblock %}
+
+{% block content %}
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>AI Detection Test</h2>
+
+            <p>
+                Upload an image to test the trained CNN model.
+            </p>
+
+        </div>
+
+
+        <div class="card"
+             style="max-width:600px;margin:auto;">
+
+            <form method="POST"
+                  enctype="multipart/form-data">
+
+                <div class="form-group">
+
+                    <label>Select Image</label>
+
+                    <input
+                        type="file"
+                        name="image"
+                        accept="image/*"
+                        required
+                    >
+
+                </div>
+
+
+                <button type="submit"
+                        class="btn btn-primary form-submit">
+
+                    Analyze Image
+
+                </button>
+
+            </form>
+
+
+            {% if prediction %}
+
+                <div class="alert-box">
+
+                    <strong>Prediction:</strong>
+
+                    {{ prediction }}
+
+                    <br>
+
+                    <strong>Confidence:</strong>
+
+                    {{ confidence }}%
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}Notifications | ElderSafe AI{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+
+    <h1>Notifications</h1>
+
+    <p>
+        Review possible fall events detected by the monitoring system.
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        {% if notifications %}
+
+            <div class="notification-list">
+
+                {% for alert in notifications %}
+
+                    <div class="notification">
+
+                        <strong>
+                            Possible Fall Detected
+                        </strong>
+
+                        <p>
+                            {{ alert.message }}
+                        </p>
+
+                        <div class="notification-time">
+
+                            {{ alert.timestamp }}
+
+                        </div>
+
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+        {% else %}
+
+            <div class="card" style="text-align:center;">
+
+                <h3>No Notifications</h3>
+
+                <p>
+                    No fall events have been recorded yet.
+                </p>
+
+            </div>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
+{% endblock %}

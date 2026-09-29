@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard | ElderSafe AI{% endblock %}
+
+{% block content %}
+
+<section class="dashboard">
+
+    <div class="container">
+
+        <div class="dashboard-header">
+
+            <div>
+
+                <h1>
+                    Welcome, {{ session.get('user_name') }}
+                </h1>
+
+                <p>
+                    Monitor your elder safety system.
+                </p>
+
+            </div>
+
+            <a href="{{ url_for('video') }}"
+               class="btn btn-primary">
+                Open Live Monitoring
+            </a>
+
+        </div>
+
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+
+                <span>Monitoring Status</span>
+
+                <h2>Ready</h2>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>Detection System</span>
+
+                <h2>Active</h2>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>Notifications</span>
+
+                <h2>
+                    <a href="{{ url_for('notifications') }}">
+                        View
+                    </a>
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Monitoring Center</h3>
+
+            <p style="margin-bottom:20px;">
+
+                Start live monitoring to analyze camera footage
+                using the trained fall detection model.
+
+            </p>
+
+            <a href="{{ url_for('video') }}"
+               class="btn btn-primary">
+
+                Start Monitoring
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

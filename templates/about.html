@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}About | ElderSafe AI{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+
+    <h1>About ElderSafe AI</h1>
+
+    <p>
+        An AI-assisted computer vision system designed to help
+        identify possible falls among elderly people through
+        camera-based monitoring.
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="feature-grid">
+
+            <div class="card">
+
+                <div class="feature-icon">01</div>
+
+                <h3>Capture</h3>
+
+                <p>
+                    Video frames are captured from a camera or
+                    compatible CCTV source.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="feature-icon">02</div>
+
+                <h3>Analyze</h3>
+
+                <p>
+                    Frames are preprocessed and analyzed using
+                    a custom-trained CNN model.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="feature-icon">03</div>
+
+                <h3>Notify</h3>
+
+                <p>
+                    Possible fall events are recorded and made
+                    available through the notification system.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

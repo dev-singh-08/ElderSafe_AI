@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block title %}Subscription | ElderSafe AI{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+
+    <h1>Choose Your Plan</h1>
+
+    <p>
+        Select a monitoring plan according to your
+        elder-care requirements.
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="pricing-grid">
+
+            <div class="card price-card">
+
+                <h3>Family</h3>
+
+                <div class="price">
+                    ₹299
+                    <span>/month</span>
+                </div>
+
+                <ul>
+                    <li>1 Monitoring Source</li>
+                    <li>AI Fall Detection</li>
+                    <li>Notification Panel</li>
+                    <li>Basic Dashboard</li>
+                </ul>
+
+                <a href="{{ url_for('signup') }}"
+                   class="btn btn-outline">
+                    Get Started
+                </a>
+
+            </div>
+
+
+            <div class="card price-card featured">
+
+                <h3>Care Home</h3>
+
+                <div class="price">
+                    ₹999
+                    <span>/month</span>
+                </div>
+
+                <ul>
+                    <li>Multiple Monitoring Sources</li>
+                    <li>AI Fall Detection</li>
+                    <li>Notification Management</li>
+                    <li>Monitoring Dashboard</li>
+                </ul>
+
+                <a href="{{ url_for('signup') }}"
+                   class="btn btn-primary">
+                    Choose Plan
+                </a>
+
+            </div>
+
+
+            <div class="card price-card">
+
+                <h3>Organization</h3>
+
+                <div class="price">
+                    ₹1999
+                    <span>/month</span>
+                </div>
+
+                <ul>
+                    <li>Multiple Cameras</li>
+                    <li>Central Dashboard</li>
+                    <li>Notifications</li>
+                    <li>Organization Support</li>
+                </ul>
+
+                <a href="{{ url_for('signup') }}"
+                   class="btn btn-outline">
+                    Get Started
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

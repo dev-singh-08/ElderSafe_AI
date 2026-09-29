@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Live Monitoring | ElderSafe AI{% endblock %}
+
+{% block content %}
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Live Monitoring</h2>
+
+            <p>
+                AI-assisted analysis of the connected camera stream.
+            </p>
+
+        </div>
+
+
+        <div class="video-container">
+
+            <img
+                src="{{ url_for('video_feed') }}"
+                alt="Live camera feed"
+            >
+
+        </div>
+
+
+        <div class="monitor-actions">
+
+            <a href="{{ url_for('notifications') }}"
+               class="btn btn-primary">
+
+                View Notifications
+
+            </a>
+
+            <a href="{{ url_for('dashboard') }}"
+               class="btn btn-outline">
+
+                Dashboard
+
+            </a>
+
+        </div>
+
+
+        <div class="alert-box">
+
+            <strong>Monitoring Status:</strong>
+
+            The system is analyzing incoming video frames
+            for possible fall events.
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

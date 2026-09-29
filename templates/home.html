@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+
+{% block title %}ElderSafe AI | Intelligent Elder Monitoring{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            AI-ASSISTED ELDER SAFETY
+        </div>
+
+        <h1>
+            Protecting Elders
+            <span>When No One Is Watching.</span>
+        </h1>
+
+        <p>
+            ElderSafe AI uses computer vision and a custom CNN model
+            to analyze camera footage and identify possible elder
+            fall events, helping caregivers respond when attention
+            is needed.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="{{ url_for('subscribe') }}"
+               class="btn btn-primary">
+                Explore Plans
+            </a>
+
+            <a href="{{ url_for('about') }}"
+               class="btn btn-outline">
+                Learn More
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Built Around Elder Safety</h2>
+
+            <p>
+                An AI-assisted monitoring layer designed to support
+                caregivers, families and elder-care organizations.
+            </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <div class="card">
+
+                <div class="feature-icon">◉</div>
+
+                <h3>Continuous Monitoring</h3>
+
+                <p>
+                    Analyze camera or video footage continuously
+                    instead of depending entirely on manual observation.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="feature-icon">✦</div>
+
+                <h3>AI Fall Detection</h3>
+
+                <p>
+                    A custom CNN model analyzes video frames
+                    and identifies possible fall-related events.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="feature-icon">!</div>
+
+                <h3>Alert Notifications</h3>
+
+                <p>
+                    Detected events can be recorded and displayed
+                    through the monitoring dashboard.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="card"
+             style="text-align:center; padding:60px 30px;">
+
+            <h2 style="
+                font-family:'Playfair Display',serif;
+                font-size:38px;
+                color:var(--olive-dark);
+                margin-bottom:15px;
+            ">
+                Technology That Supports Care
+            </h2>
+
+            <p style="
+                max-width:650px;
+                margin:0 auto 25px;
+                color:var(--muted);
+            ">
+                ElderSafe AI combines computer vision, deep learning
+                and web technology to create an accessible monitoring
+                platform for elder-care environments.
+            </p>
+
+            <a href="{{ url_for('subscribe') }}"
+               class="btn btn-primary">
+                Get Started
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
